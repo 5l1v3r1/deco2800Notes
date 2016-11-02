@@ -6,6 +6,7 @@
 \usepackage{multicol}
 \usepackage{float}
 \usepackage{pdflscape}
+\usepackage{tikz}
 
 \setprimary{orange}
 
@@ -77,6 +78,32 @@ Employee \texttt{(Class Name)}\\\hline
 +getDepartment():Department\\
 +changeDepartment(dept:Department)\\\hline
 \end{tabular}
+\subheading{Association}
+\begin{tikzpicture}[scale=1, transform shape]
+\draw (-1,1) rectangle (1,1.5) node[pos=.5] {Employee};
+\draw[thick,->] (0,.2) -- (0,1);
+\draw (.1,.4) node {1};
+\draw (.1,.7) node {*};
+\draw (0,-1) node(t) {
+    \begin{tabular}{|l|}
+        \hline EmployeeDAO\\\hline\\
+        \hline
+        +getAll():List<Employee>\\
+        +getEmployee(employeeNum:String):Employee\\
+        +update(employee:Employee):int\\\hline
+    \end{tabular}
+};
+\end{tikzpicture}
+Navigability; arrow in direction of usage, no arrow is bi-directional. Multiplicity; min..max (or n), * is unlimited.
+\subheading{Aggregation}
+Strong relationship ``has a''. Hollow diamond
+\subheading{Composition}
+Strong relation ``is part of''. When composite is destroyed so is the part coincident life-span. Filled diamond
+\subheading{Inheritance/Subtyping}
+\includegraphics[width=\linewidth]{inheritance.png}
+Generalisation/Specialisation: solid line, hollow arrow head. Implements: dashed line, hollow arrow head. Italics == abstract.
+\subheading{Packages}
+Dashed line = dependency. Solid line = Nesting
 
 \heading{System}
 Jenkins -- Builds the changes to the repo; SonarQube -- checks for codesmells and code errors; Gradle -- For testing and running on local machine\\
