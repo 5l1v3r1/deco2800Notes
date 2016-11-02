@@ -104,6 +104,12 @@ Strong relation ``is part of''. When composite is destroyed so is the part coinc
 Generalisation/Specialisation: solid line, hollow arrow head. Implements: dashed line, hollow arrow head. Italics == abstract.
 \subheading{Packages}
 Dashed line = dependency. Solid line = Nesting
+\heading{Design Patterns}
+Apply at various levels of abstraction. Are not reusable classes. Are not complex, domain-specific designs. Are limited in scope. Capture design intent, but not the full detail.
+\subheading{Common Language}
+Provide a common language for describing solutions; Each window is a composite - with decorators providing titles and scroll bars, To save memory - each image is a flyweight.
+\subheading{Pattern Form (GOF)}
+Pattern Name - short descriptive moniker and any aliases. Intent - short statement summarizing what problem it solves. Motivation - scenario that describes a problem this pattern solves. Applicability - how to identify when to use this pattern. Structure - description of class relationships and the object interactions. Participants - classes making up the pattern and their responsibilities. Collaborations - how the classes collaborate to perform their responsibilities. Consequences - benefits and trade-offs of using the pattern. Implementation - hints for implementing the pattern (consider language specific issues). Known Uses - examples of the use of this pattern in real systems (the Rule of Three). Related Patterns.
 
 \heading{System}
 Jenkins -- Builds the changes to the repo; SonarQube -- checks for codesmells and code errors; Gradle -- For testing and running on local machine\\
