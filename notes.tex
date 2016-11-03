@@ -110,6 +110,17 @@ Apply at various levels of abstraction. Are not reusable classes. Are not comple
 Provide a common language for describing solutions; Each window is a composite - with decorators providing titles and scroll bars, To save memory - each image is a flyweight.
 \subheading{Pattern Form (GOF)}
 Pattern Name - short descriptive moniker and any aliases. Intent - short statement summarizing what problem it solves. Motivation - scenario that describes a problem this pattern solves. Applicability - how to identify when to use this pattern. Structure - description of class relationships and the object interactions. Participants - classes making up the pattern and their responsibilities. Collaborations - how the classes collaborate to perform their responsibilities. Consequences - benefits and trade-offs of using the pattern. Implementation - hints for implementing the pattern (consider language specific issues). Known Uses - examples of the use of this pattern in real systems (the Rule of Three). Related Patterns.
+\heading{User-Centered Design}
+Understand->Define->Ideate(Sketch)->Prototype->Test->Deliver!
+\heading{Debuggin Process}
+\includegraphics[width=\linewidth]{DebugProcess.png}
+\heading{Logging}
+\subheading{java.util.logging}
+Levels: SEVERE, WARNING, INFO, CONFIG, FINE, FINER, FINEST (in order, also OFF and ALL). Level of the logger is a cutoff for recording messages
+\subheading{Log4J}
+Levels: FATAL, ERROR, WARN, INFO, DEBUG, TRACE (also OFF, ALL)
+\subheading{slf4j}
+Brings all the loggers together, enabling switching during runtime or on compilation. Avoids every library having its own logging facility. Uses all the log levels of log4j but FATAL.
 
 \heading{System}
 Jenkins -- Builds the changes to the repo; SonarQube -- checks for codesmells and code errors; Gradle -- For testing and running on local machine\\
