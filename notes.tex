@@ -110,8 +110,34 @@ Apply at various levels of abstraction. Are not reusable classes. Are not comple
 Provide a common language for describing solutions; Each window is a composite - with decorators providing titles and scroll bars, To save memory - each image is a flyweight.
 \subheading{Pattern Form (GOF)}
 Pattern Name - short descriptive moniker and any aliases. Intent - short statement summarizing what problem it solves. Motivation - scenario that describes a problem this pattern solves. Applicability - how to identify when to use this pattern. Structure - description of class relationships and the object interactions. Participants - classes making up the pattern and their responsibilities. Collaborations - how the classes collaborate to perform their responsibilities. Consequences - benefits and trade-offs of using the pattern. Implementation - hints for implementing the pattern (consider language specific issues). Known Uses - examples of the use of this pattern in real systems (the Rule of Three). Related Patterns.
+\subheading{Common Patters}
+\subsubheading{Singleton}
+\textbf{Intent:} Ensure a class only has one instance, and provide a global point of access to it (\texttt{getInstance()} function)
+\subsubheading{Observer}
+\textbf{Intent:} Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.\\
+\textbf{Consequences:} Loose coupling between Subject and Observer, Broadcast communication.
+\subsubheading{Composite}
+\textbf{Intent:} Compose objects into tree structures to represent whole-part hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.\\
+\textbf{Examples:} Menu Bars, Graphics.
+\subsubheading{Command}
+Encapsulate a request as an object, thereby letting you parameterize clients with different requests.
+\subsubheading{Visitor}
+Represent an operation to be performed on the elements of an object structure.
+\subsubheading{State}
+Allow an object to alter its behavior when its internal state changes.
+\subsubheading{Lazy Loading}
+Avoid creating a large/complex/expensive object until you actually need it. Create a placeholder object that can be substituted out when the real object is actually needed.\\
+\textbf{Proxy} - loads real object when data is accessed then forwards messages to real object (delegates).\\
+\textbf{Ghost} - real object is created but without any data. Loads data when a method is invoked.
+\subsubheading{Radial Menus}
+\textbf{Intent:} Present user commands or choices radiating out from a central point.\\
+\textbf{Similar Patterns:} Icons instead of Text.\\
+\textbf{Advantages:} Shorter average distance to each item, greater distance between each item, faster interaction for expert users, works well for selecting graphical options.\\
+\textbf{Disadvantages:} Doesn't scale/nest as well as vertical menus (best for 3-12 items or so), not as intuitive to read for the novice user, less familiar, text has to remain horizontal.
+\subheading{Anti-Patterns}
+Some things look like patterns, but make things worse, not better. Knowing these is almost as valuable as knowing the ``good'' patterns.
 \heading{User-Centered Design}
-Understand->Define->Ideate(Sketch)->Prototype->Test->Deliver!
+Understand -> Define -> Ideate(Sketch) -> Prototype -> Test -> Deliver!
 \heading{Debuggin Process}
 \includegraphics[width=\linewidth]{DebugProcess.png}
 \heading{Logging}
