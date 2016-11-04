@@ -163,6 +163,46 @@ Brings all the loggers together, enabling switching during runtime or on compila
 \heading{System}
 Jenkins -- Builds the changes to the repo; SonarQube -- checks for codesmells and code errors; Gradle -- For testing and running on local machine\\
 
+\heading{JDBC(Java DataBase Connectivity)}
+Standard library for relational databases. Standardises: Connecting, Queries and Updates, Results. Does not standardize SQL syntax (Sends strings).
+\subheading{Drivers}
+JDBC Driver Manager - Communicates with vendor-specific drivers that perform the real communication with the database.
+\subheading{Plan for changes}
+Limit data access to single area of code and don't distribute JDBC calls throughout the code. Don't return JDBC-specific objects from the data-access layer (Return ordinary Java Objects).
+% \subheading{Basic Steps}
+% \textbf{1.} Define the Connection URL\\
+% \textbf{2.} Establish the Connection\\
+% \textbf{3.} Create a Statement object\\
+% \textbf{4.} Execute a query\\
+% \textbf{5.} Process the results\\
+% \textbf{6.} Close the connection\\
+
+\heading{Apache Derby}
+Written in Java. Good for small/medium applications (less than gig size, few queries/second). \textbf{Embedded mode:} Database runs in same VM as Java app. Does not accept network connections. Perfect for simple self-contained applications (easy setup). \textbf{Standalone mode:} Runs in seperate VM. Accepts network connections.
+
+\heading{Prepared Statements}
+Repeatedly executing query or update where format stays consistent, but values change.
+\subheading{Advantages}
+Move convenient than string concatenation. Much less susceptible to SQL injection attacks.
+
+\heading{Advanced Features}
+\subheading{Transactions}
+By default, after each SQL statement is executed the changes are automatically committed to the database. Change with \texttt{connection.setAutoCommit(false);}
+\subheading{More Features}
+Stored procedures, Changing buffer size, Connection pooling, Hibernate/JPA and other ORM tools.
+
+\heading{Flyway}
+Store versions of database in metadata. Migrate from one version to the next using SQL or Java. Select database version in Gradle.
+
+\heading{DBUnit}
+Used for DataBase testing. Assumes there is a test database. Runs tests over the database.
+
+\heading{JDBI}
+Intermediate level relational database library. Methods map to single SQL statements.\\
+
+\heading{JDBC v JDBI v JPA v JDO}
+\textbf{JDBC:} Oriented towards database usage. \textbf{JDBI:} Oriented towards object usage. \textbf{JPA:} Focus on modelling. \textbf{JDO:} Focus on object modelling.
+
 \end{multicols}
 \end{landscape}
 \end{document}
