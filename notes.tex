@@ -38,6 +38,8 @@ Coupling -- Degree of interdependence between modules\\
 Merge Frequently; Don't push broken code; Don't push untested code; Don't push when the build is broken; If the build is broken, fix it\\
 \heading{Test-Driven Development}
 A software development methodology based on: Short development iterations, Satisfying pre-prepared test cases. An independent offshoot of Agile methodologies. Based on using automated unit testing to drive software development.
+\subsubheading{How Many Tests?}
+Test or both black-box and glass-box. As the programmer add glass-box tests for: Conditionals, Loops, Operations, Polymorphism.
 \begin{multicols}{2}
 \includegraphics[width=\linewidth]{test1.png}
 \includegraphics[width=\linewidth]{test2.png}
@@ -49,10 +51,6 @@ Applying Test-Driven Development relies on the existence of an automated unit te
 \end{multicols}
 \subheading{Refactoring}
 Code that needs refactoring has: Duplication, Unclear intent, Tight coupling, Pure data classes, Over-sized or under-sized classes, Complex or long methods, Switch statements instead of polymorphism.
-\subheading{Designing Unit Tests}
-Test one thing only (Use few assertions per test). Work in isolation (Without relying on other tests). Test boundary conditions early. Avoid testing against ``real'' resources, i.e. GUIs or databases, to support testing determinism (Use mock objects and services - with fixed data)
-\subsubheading{How Many Tests?}
-Test or both black-box and glass-box. As the programmer add glass-box tests for: Conditionals, Loops, Operations, Polymorphism.
 \subheading{Mocking}
 \textbf{\firstletter{D}ummies} - test objects which are never used but exist only to satisfy syntactic requirements\\
 \textbf{\firstletter{S}tubs} - test objects whose methods return fixed values, and support the specific test cases only\\
