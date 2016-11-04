@@ -22,18 +22,18 @@
 \headfoot
 \begin{multicols}{3}
 
-\heading{Team}
-Complementary Skills; Mutual Accountability; Common Commitment; Shared Goal; Collective Work Products; More than the sum of its parts\\
-\subheading{Meetings}
-Hogging -- talking too much; Flogging -- beating an issue to death; Frogging -- jumping from topic to topic; Bogging -- getting stuck on an issue; Ignoring the Elephant in the Corner\\
+% \heading{Team}
+% Complementary Skills; Mutual Accountability; Common Commitment; Shared Goal; Collective Work Products; More than the sum of its parts\\
+% \subheading{Meetings}
+% Hogging -- talking too much; Flogging -- beating an issue to death; Frogging -- jumping from topic to topic; Bogging -- getting stuck on an issue; Ignoring the Elephant in the Corner\\
 \heading{Software Architecture}
 \subheading{Quality}
 Cohesion -- Degree to which elements of a module fit together\\
 Coupling -- Degree of interdependence between modules\\
-\begin{multicols}{2}
-\includegraphics[width=\linewidth]{LowCHighC.png}
-\includegraphics[width=\linewidth]{HighCLowC.png}
-\end{multicols}
+% \begin{multicols}{2}
+% \includegraphics[width=\linewidth]{LowCHighC.png}
+% \includegraphics[width=\linewidth]{HighCLowC.png}
+% \end{multicols}
 \heading{Continuous Integration}
 Merge Frequently; Don't push broken code; Don't push untested code; Don't push when the build is broken; If the build is broken, fix it\\
 \heading{Test-Driven Development}
@@ -136,6 +136,10 @@ Avoid creating a large/complex/expensive object until you actually need it. Crea
 \textbf{Disadvantages:} Doesn't scale/nest as well as vertical menus (best for 3-12 items or so), not as intuitive to read for the novice user, less familiar, text has to remain horizontal.
 \subheading{Anti-Patterns}
 Some things look like patterns, but make things worse, not better. Knowing these is almost as valuable as knowing the ``good'' patterns.
+\heading{Code Smells}
+Code smells refer to any symtom in the source code that could possibly indicate a deeper problem. Code smells are not the problem. They do not produce compile errors and are not even bugs. Simply, they are evidence that there might be a bug or other issue nearby.
+\subheading{Code Smells V Anti-Patterns}
+Code smells are not the problem, however the benefit of understanding code smells is to help you discover and correct the anti-patterns and bugs that are the real problems.
 \heading{User-Centered Design}
 Understand -> Define -> Ideate(Sketch) -> Prototype -> Test -> Deliver!
 \heading{Debuggin Process}
