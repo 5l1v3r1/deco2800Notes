@@ -31,10 +31,10 @@
 \subheading{Quality}
 \small Cohesion -- Degree to which elements of a module fit together\\
 \small Coupling -- Degree of interdependence between modules\\
-% \begin{multicols}{2}
-% \includegraphics[width=\linewidth]{LowCHighC.png}
-% \includegraphics[width=\linewidth]{HighCLowC.png}
-% \end{multicols}
+\begin{multicols}{2}
+\includegraphics[width=\linewidth]{LowCHighC.png}
+\includegraphics[width=\linewidth]{HighCLowC.png}
+\end{multicols}
 
 \heading{Continuous Integration}
 \small Merge Frequently; Don't push broken code; Don't push untested code; Don't push when the build is broken; If the build is broken, fix it\\
@@ -47,13 +47,13 @@
 \includegraphics[width=\linewidth]{test1.png}
 \includegraphics[width=\linewidth]{test2.png}
 \end{multicols}
+\subheading{Refactoring}
+\small Code that needs refactoring has: Duplication, Unclear intent, Tight coupling, Pure data classes, Over-sized or under-sized classes, Complex or long methods, Switch statements instead of polymorphism.
 \subheading{Test-Driven Dev: Red, Green, Refactor}
 \begin{multicols}{2}
 \includegraphics[width=\linewidth]{Cycle.png}
 \small Applying Test-Driven Development relies on the existence of an automated unit testing environment. You are obliged to maintain a suite of test cases. Code must not be released until is has associated tests. The test are written \textbf{before} the code.
 \end{multicols}
-\subheading{Refactoring}
-\small Code that needs refactoring has: Duplication, Unclear intent, Tight coupling, Pure data classes, Over-sized or under-sized classes, Complex or long methods, Switch statements instead of polymorphism.
 \subheading{Mocking}
 \small\textbf{\firstletter{D}ummies} - test objects which are never used but exist only to satisfy syntactic requirements\\
 \small\textbf{\firstletter{S}tubs} - test objects whose methods return fixed values, and support the specific test cases only\\
@@ -187,9 +187,9 @@ Employee \texttt{(Class Name)}\\\hline
 
 \heading{Advanced Features}
 \subheading{Transactions}
-\small By default, after each SQL statement is executed the changes are automatically committed to the database. Change with \texttt{connection.setAutoCommit(false);}
+\scriptsize By default, after each SQL statement is executed the changes are automatically committed to the database. Change with \texttt{connection.setAutoCommit(false);}
 \subheading{More Features}
-\small Stored procedures, Changing buffer size, Connection pooling, Hibernate/JPA and other ORM tools.
+\scriptsize Stored procedures, Changing buffer size, Connection pooling, Hibernate/JPA and other ORM tools.
 
 \heading{Flyway}
 \small Store versions of database in metadata. Migrate from one version to the next using SQL or Java. Select database version in Gradle.
@@ -197,8 +197,11 @@ Employee \texttt{(Class Name)}\\\hline
 \heading{DBUnit}
 \small Used for DataBase testing. Assumes there is a test database. Runs tests over the database.
 
-\heading{JDBI}
-\small Intermediate level relational database library. Methods map to single SQL statements.\\
+% \heading{JDBI}
+% \small Intermediate level relational database library. Methods map to single SQL statements.
+
+% \heading{JDO}
+% \small Persistence in database. Not tied to relational structure
 
 \heading{JDBC v JDBI v JPA v JDO}
 \small\textbf{JDBC:} Oriented towards database usage. \textbf{JDBI:} Oriented towards object usage. \textbf{JPA:} Focus on modelling. \textbf{JDO:} Focus on object modelling.
